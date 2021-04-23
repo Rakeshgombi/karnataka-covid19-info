@@ -1,0 +1,1 @@
+# karnataka-covid19-info

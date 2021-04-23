@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: #161625 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.github-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+}
+
+.container {
+  position: relative;
+  max-width: 90%;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("../covidbg.png") no-repeat center center/40%;
+  background-attachment: fixed;
+  filter: drop-shadow(2px 4px 8px #585858);
+  z-index: -1;
+}
+
+.stateName {
+  background: #242436;
+  color: rgb(156, 3, 245);
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 90%;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: rgba(36, 36, 54, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.424);
+  box-shadow: 0px 0px 8px rgb(75, 75, 75);
+  margin: 40px auto;
+}
+
+.stateName a {
+  color: rgb(255, 60, 0);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+#time {
+  font-size: smaller;
+  padding: 5px 0;
+  color: rgb(156, 3, 245);
+}
+
+#state {
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  transform: perspective(1000px);
+  transform: translateZ(20px);
+  transform-style: preserve-3d
+}
+
+.box {
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.districts {
+  max-width: 400px;
+  width: 300px;
+  display: block;
+  background: #ffffff;
+  margin: 5px;
+  padding: 8px;
+  background: rgba(36, 36, 54, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.424);
+  box-shadow: 0px 0px 8px rgb(75, 75, 75);
+  color: rgba(255, 210, 7, 0.849);
+}
+
+.district {
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.case-container {
+  padding: 5px;
+  font-size: 1.1rem;
+}
+
+.active {
+  padding: 5px;
+  color: rgba(0, 140, 255, 0.856);
+  font-weight: 700;
+}
+
+.confirmed {
+  padding: 5px;
+  color: rgba(255, 60, 1, 0.918);
+  font-weight: 700;
+}
+
+.deceased {
+  padding: 5px;
+  color: rgb(148, 148, 148);
+  font-weight: 700;
+}
+
+.recovered {
+  padding: 5px;
+  color: rgba(4, 192, 20, 0.897);
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+  .stateName {
+    font-size: 1.2rem;
+  }
+
+  .stateName a {
+    font-size: 1.3rem;
+  }
+
+  .container::before {
+    background-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 600px) {
+  .container::before {
+    background-size: 60%;
+  }
+}
